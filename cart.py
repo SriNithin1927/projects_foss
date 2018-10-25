@@ -1,3 +1,4 @@
+import random
 name=input("name :")
 cost=0
 types_="none"
@@ -69,4 +70,29 @@ while types_!="checkout":
 		break
 	else :
 		print("please give a valid input else checkout")
-print("your bill amount :",cost)
+print("amount payable for",name,":",cost)
+print("do you have any coupons "+name)
+coup=input()
+if coup=="yes":
+	print("4% discount")
+	cost=cost*(96/100)
+	print("your reducted amount : ",cost)
+captcha=["SsndSScxjnD","ShbSubhushcfc","gjyghHJGjdn"]
+a=random.choice(captcha)
+print("enter the captcha code "+a+" :")
+eq=input()
+while x!=3:
+	if a==eq:
+		print("your total bill amount :",cost)
+		break
+	else:
+		print("please try again")
+		x=x+1
+if x==3:
+	print("you have enered wrong for too many times bill cannot be proceeded")
+else:
+	card=input("enter card number :")
+	otp=input("enter otp: ")
+	print("bill amount payed ")
+	print("Thank you "+name)
+
